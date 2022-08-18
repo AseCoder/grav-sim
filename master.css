@@ -1,0 +1,29 @@
+* {
+	margin: 0;
+	background-color: black;
+	overflow: hidden;
+	color: white;
+	font-family: monospace;
+}
+#canvas {
+	z-index: 1;
+}
+.controls {
+	display: flex;
+	margin-left: 10px;
+}
+.controls button {
+	border: 1px solid white;
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	margin-right: 10px;
+	margin-top: 10px;
+	font-size: 30px;
+}
+.controls button:hover {
+	background-color: #555;
+}
+.controls button:active {
+	background-color: #888;
+}

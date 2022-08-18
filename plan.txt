@@ -1,0 +1,19 @@
+gravity simulation:
+- plus button adds a ball
+- when hovering over a ball, 3 buttons show up:
+	1. delete
+	2. change size (mass) (take dist to ball center, change in radius is equal to half of distance between current cursor,ball dist minus init cursor,ball dist) (left click for done) (right click to reset to default value)
+	3. change initial velocity vector (if no vector yet, place it under the cursor and follow cursor movements) (if vector exists, move half of what cursor does) (right click for no velocity)
+
+	- the mass of a ball is written on the ball when hovering
+	- the velocity vector of a ball is displayed in grey when hovering, white when editing
+
+- when simulation is played, start timer. run calculations:
+	- calculate forces of gravity
+	- use force and mass to calculate accel
+	- change velocity
+	- change pos
+run calculations over and over until timer reaches 30 ms. request animation frame. draw balls
+
+- no hovering over balls when simulation running
+- simulation can be paused. draw 1 last frame immediately.

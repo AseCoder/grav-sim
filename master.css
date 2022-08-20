@@ -11,6 +11,8 @@
 .controls {
 	display: flex;
 	margin-left: 10px;
+	background-color: transparent;
+	position: absolute;
 }
 .controls button {
 	border: 1px solid white;

@@ -17,3 +17,26 @@ document.getElementById('playpause').onclick = e => {
 	}
 	console.log('paused', paused);
 }
+
+window.onkeyup = e => {
+	if (e.keyCode === 32) {
+		document.getElementById('playpause').click();
+	}
+	// console.log(e.keyCode);
+	// w 87, a 65, s 83, d 68
+}
+let mouseDown = false;
+window.onmousedown = e => {
+	mouseDown = true;
+	console.log('mouse down');
+}
+window.onmouseup = e => {
+	mouseDown = false;
+	console.log('mouse up');
+}
+document.getElementById('canvas').onmousemove = e => {
+	if (!mouseDown) return;
+	viewportDragOffset[0] += e.movementX;
+	viewportDragOffset[1] += e.movementY;
+	toDrawOrNot();
+};
